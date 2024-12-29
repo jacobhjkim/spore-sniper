@@ -177,7 +177,7 @@ let done = false
 async function pollSporeApi(): Promise<void> {
   // If we've already done the buys, no need to continue
   if (done) return
-
+  console.log('Polling Spore API...')
   try {
     const resp = await fetch(SPORE_API_URL)
     const data = (await resp.json()) as SporeApiResponse
